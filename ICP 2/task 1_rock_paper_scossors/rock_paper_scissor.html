@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock-Paper-Scissor</title>
+    <style>
+        .game {
+            background-color: lightgrey;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+<h1> Rock Paper Scissor</h1>
+<div class="game">
+<script>
+    var userchoice=prompt("Choose rock, paper or scissors");
+    document.write("<p>Player 1:" + " " + userchoice + "</p>");
+    var machinechoice= Math.random();
+    if(machinechoice<=0.33){
+        machinechoice="rock";
+    }else if(0.34<=machinechoice<=0.66){
+        machinechoice="paper";
+    }else{
+        machinechoice="scissors";
+    }
+    document.write("<p>Player 2:" + " " + machinechoice + "</p>");
+     function compare(choice1,choice2) {
+         if(choice1===choice2){
+            return "It's a draw";
+         }
+        if(choice1==="rock") {
+            if (choice2 === "scissors") {
+                return "You Win!";
+            } else {
+                return "You Lose! Try again.";
+            }
+        }
+         if(choice1==="paper") {
+             if (choice2 === "rock") {
+                 return "You Win!"
+             } else {
+                 return "You Lose! Try again.";
+             }
+         }
+             if(choice1==="scissors"){
+                 if(choice2==="paper"){
+                     return "You Win!"
+                 }else{
+                     return "You Lose! Try again.";
+                 }
+         }
+     };
+     var results= compare(userchoice, machinechoice);
+    document.write("<p>Results" + " :" + results + "</p>");
+
+</script>
+</div>
+</body>
+</html>
