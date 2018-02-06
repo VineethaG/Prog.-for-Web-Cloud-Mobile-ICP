@@ -55,12 +55,11 @@
         <div class="container">
             <div class="row" style="font-size: 25px;">
                 <div class="col-sm-4"><p><b>Total Seats:30</b></p></div>
-
                 <div class="col-sm-4"><p id="seats"><b>Available Seats:20</b></p></div>
-                <div class="col-sm-" ><button onclick="myFunction()" type="button" class="btn" style="font-size: 24px"> Enroll </button></div>
+                <div class="col-sm-4" ><button onclick="myFunction()" type="button" class="btn" style="font-size: 24px"> Enroll </button></div>
             </div>
         </div>
-        <div id="myDIV" style="display: none" class="  text-center ">
+        <div id="success" style="display: none" class="  text-center ">
             <h1> You are successfully Registeted to this course </h1>
             <h1> Seats left : 19 </h1>
 
@@ -68,12 +67,11 @@
 
         <script>
             function myFunction() {
-                var x = document.getElementById("myDIV");
+                var x = document.getElementById("success");
                 if (x.style.display === "none") {
                     x.style.display = "block";
                     var y = document.getElementById("seats")
                     y.innerHTML="<b>Available Seats:19</b>"
-                    document.getElementById("demo1").style.display="none";
                 } else {
                     x.style.display = "none";
                 }
