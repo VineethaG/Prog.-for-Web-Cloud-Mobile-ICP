@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Description</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<script>
+    function myFunction() {
+        window.pop("You are successfully Registeted to this course");
+    }
+</script>
+
+<body>
+
+    <div class="text-center" style="background: cornflowerblue; border: black 1px solid">
+        <h1> University of Missouri Kansas City</h1>
+        <h3> Course Description</h3>
+    </div>
+    <hr style="border-top: 3px solid black">
+
+
+        <div class="col-sm-3" style="margin-top:5%">
+            <div class="desc-image"><a href="description.html"> <img src=" https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAJjAAAAJDEwYmNhODU0LTBhY2YtNGM1My04OGU0LWQ3ZTk5OTMzNzFhZg.png" > </a>
+            <div style="position: absolute; left: 33%"> <a href="description.html" style="text-align: center ; font-size: 32px">Cloud Computing </a> </div>
+            </div>
+    </div>
+
+
+   <div class="col-md-9">
+    <div class="desc-title" >
+        <h2><b>COMP-SCI 5525 - Cloud Computing </b></h2>
+
+        <table class="table">
+            <thead>
+            <tr class="table-primary" style="font-size: 25px" >
+                <th> Day & timings </th>
+                <th>Room</th>
+                <th>Instructor</th>
+                <th>Meeting Dates</th>
+                <th>Credit hours</th>
+            </tr>
+            </thead>
+            <tbody style="font-size: 25px">
+            <tr>
+                <td>TuTh 8:30AM - 9:45PM</td>
+                <td>Flarsheim Hall-Rm 00260</td>
+                <td>Baek-Young Choi</td>
+                <td>01/16/2018 - 05/11/2018</td>
+                <td>   3   </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="container">
+            <div class="row" style="font-size: 25px;">
+                <div class="col-sm-4"><p><b>Total Seats:30</b></p></div>
+
+                <div class="col-sm-4"><p id="seats"><b>Available Seats:20</b></p></div>
+                <div class="col-sm-" ><button onclick="myFunction()" type="button" class="btn" style="font-size: 24px"> Enroll </button></div>
+            </div>
+        </div>
+        <div id="myDIV" style="display: none" class="  text-center ">
+            <h1> You are successfully Registeted to this course </h1>
+            <h1> Seats left : 19 </h1>
+
+        </div>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    var y = document.getElementById("seats")
+                    y.innerHTML="<b>Available Seats:19</b>"
+                    document.getElementById("demo1").style.display="none";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+
+</body>
+</html>

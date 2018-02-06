@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function mybFunction() {
+            window.location= "courselist.html"
+        }
+    </script>
+
+</head>
+<body>
+<div class="container">
+    <div class="text-center" style="background: cornflowerblue; border: black 1px solid">
+        <h1> University of Missouri Kansas City</h1>
+        <h3> Course Registration </h3>
+    </div>
+    <hr style="border-top: 3px solid black">
+
+    <div class="form-group">
+        <label for="sel1"> level of Education:</label>
+        <select class="form-control" id="sel1">
+            <option>Bachelors </option>
+            <option>Masters</option>
+         </select>
+    </div>
+
+    <div class="row">
+     <div class="col-sm-6 form-group">
+       <label for="sel1"> Semester:</label>
+
+         <select class="form-control" >
+        <option>Fall  </option>
+        <option>Spring</option>
+        <option>Summer</option>
+           </select>
+     </div>
+        <div class="col-sm-6 form-group">
+            <label for="sel1"> Year:</label>
+
+            <select class="form-control" >
+                <option>2018  </option>
+                <option>2019</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="sel1"> Subject:</label>
+        <select class="form-control" >
+            <option> Select</option>
+            <option>Arts </option>
+            <option>Accounting</option>
+            <option>Computer Science</option>
+            <option> Electrical Engineering</option>
+            <option>Philosophy</option>
+            <option>Psychology</option>
+        </select>
+    </div>
+
+</div>
+<div style="position : absolute; left: 50%;">
+    <button type="button"   onclick="mybFunction()"  class="btn ">Search Courses</button>
+</div>
+
+</body>
+</html>
