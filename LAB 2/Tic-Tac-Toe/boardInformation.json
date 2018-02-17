@@ -1,0 +1,39 @@
+{
+  "information": [{
+      "name": "div1",
+      "classes": "square-div left not-bottom"
+    },
+    {
+      "name": "div2",
+      "classes": "square-div middle not-bottom"
+    },
+    {
+      "name": "div3",
+      "classes": "square-div not-bottom"
+    },
+    {
+      "name": "div4",
+      "classes": "square-div left not-bottom"
+    },
+    {
+      "name": "div5",
+      "classes": "square-div middle not-bottom"
+    },
+    {
+      "name": "div6",
+      "classes": "square-div not-bottom"
+    },
+    {
+      "name": "div7",
+      "classes": "square-div left"
+    },
+    {
+      "name": "div8",
+      "classes": "square-div middle"
+    },
+    {
+      "name": "div9",
+      "classes": "square-div"
+    }
+  ]
+}

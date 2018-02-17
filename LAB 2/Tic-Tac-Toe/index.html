@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tic Tac Toe Game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+
+<body>
+<div class='title'>
+  <div></div>
+  <div class='header'>TIC-TAC-TOE</div>
+  <div></div>
+</div>
+
+  <div id="container" ng-app="tic-tac-toe" ng-controller="boardCtrl">
+    <div class="game-board">
+      <div id="{{div.name}}" class="{{div.classes}}" ng-repeat="div in divInfo" ng-click="processClick(this)"></div>
+    </div>
+
+    <div id="message-div">
+      <h3 class="middle-message" id="message">{{message}}</h3>
+    </div>
+
+    <div id="new-game-div" ng-show="showNewGameDiv">
+      <form class="" action="">
+                <button type="button" ng-click="startGame()" class="new-game-button">New Game</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    var app = angular.module('tic-tac-toe', []);
+    app.controller('boardCtrl', function($scope, $http) {
+      $scope.userType = " ";
+      $scope.canGo = false;
+      $scope.message = "Click the to start a new game";
+      $scope.showNewGameDiv = true;
+      $scope.turnName = 'o';
+      $scope.arrayOfDivIDs = new Array('div1', 'div2', 'div3', 'div4', 'div5', 'div6', 'div7', 'div8', 'div9');
+
+      // recieves information about the square that was clicked on as a param and if move is valid changes the square clicked on to a x or o depending on the user's identity
+      $scope.processClick = function(clickedOn) {
+        $scope.theElement = document.getElementById(clickedOn.div.name);
+        if ($scope.checkMove($scope.theElement)) {
+          if ($scope.userType == "x" && $scope.canGo == true) {
+            $scope.theElement.style.backgroundImage = "url('images/LetterX-resized.png')";
+            $scope.userType = "o";
+            $scope.canGo = false;
+
+            $scope.continueGame();
+          } else if ($scope.userType == "o" && $scope.canGo == true) {
+            $scope.theElement.style.backgroundImage = "url('images/LetterO-resized.png')";
+            $scope.userType = "x";
+            $scope.canGo = false;
+            $scope.continueGame();
+          }
+        }
+      }
+
+      // checks if a move made is valid by validating that user clicked on a empty square
+      $scope.checkMove = function(theElement) {
+        if (theElement.style.backgroundImage != "") {
+          return false;
+        } else {
+          return true;
+        }
+      }
+      // displays winner, turn, and tie messages in the message div
+      $scope.changeMessage = function(message) {
+        if (message == "x")
+          $scope.message = "Now it is X's turn to make a move";
+        else if (message == "o")
+          $scope.message = "Now it is O's turn to make a move";
+        else if (message == "tie")
+          $scope.message = "Its a tie";
+        else if (message == "winnerX")
+          $scope.message = "X Wins!";
+        else if (message == "winnerO")
+          $scope.message = "O Wins!";
+      }
+
+      // at the games start activated to hide the div that lets you start new game
+      // at the games end activated to reveal the div that lets you start new game
+      $scope.toggleNewGameDiv = function() {
+        $scope.showNewGameDiv = !$scope.showNewGameDiv;
+      }
+
+      // run at the end of every move to decide if a winner or tie has been reached
+      $scope.decideGameStatus = function() {
+        var array = new Array();
+        var count = 0;
+        var sample = "none";
+        for (var i = 0; i < $scope.arrayOfDivIDs.length; i++) {
+          if (document.getElementById($scope.arrayOfDivIDs[i]).style.backgroundImage == "url(\"images/LetterX-resized.png\")")
+            array.push(1);
+          else if (document.getElementById($scope.arrayOfDivIDs[i]).style.backgroundImage == "url(\"images/LetterO-resized.png\")")
+            array.push(2);
+          else {
+            array.push(0);
+          }
+        }
+
+        if (array[0] == array[1] && array[1] == array[2] && array[2] != 0) {
+          sample = array[0];
+        } else if (array[3] == array[4] && array[4] == array[5] && array[5] != 0) {
+          sample = array[3];
+        } else if (array[6] == array[7] && array[7] == array[8] && array[8] != 0) {
+          sample = array[6];
+        } else if (array[0] == array[3] && array[3] == array[6] && array[6] != 0) {
+          sample = array[0];
+        } else if (array[1] == array[4] && array[4] == array[7] && array[7] != 0) {
+          sample = array[1];
+        } else if (array[2] == array[5] && array[5] == array[8] && array[8] != 0) {
+          sample = array[2];
+        } else if (array[0] == array[4] && array[4] == array[8] && array[8] != 0) {
+          sample = array[0];
+        } else if (array[2] == array[4] && array[4] == array[6] && array[6] != 0) {
+          sample = array[2];
+        }
+
+        if (sample == 1) {
+          $scope.changeMessage("winnerX");
+          sample = "none";
+          return true;
+        } else if (sample == 2) {
+          $scope.changeMessage("winnerO");
+          sample = "none";
+          return true;
+        } else {
+          for (var i = 0; i < array.length; i++) {
+            if (array[i] == 0)
+              count++;
+          }
+          if (count == 0) {
+            $scope.changeMessage("tie");
+            return true;
+          }
+          return false;
+        }
+      }
+
+      // starts the game when the user clicks the new game button
+      $scope.startGame = function() {
+        $scope.userType = $scope.turnName;
+        $scope.toggleNewGameDiv();
+        $scope.changeMessage($scope.userType);
+        $scope.canGo = true;
+      }
+
+      // after the user successfully makes a move calls function that decides whether the end of the game has been reached
+      // if the game is determined to be over calls function that restarts the game board
+      // if the game is determined to be not over changes value of flag variable which allows the user to make another move
+      $scope.continueGame = function() {
+        if ($scope.decideGameStatus()) {
+          $scope.restartGame();
+        } else {
+          $scope.changeMessage($scope.userType);
+          $scope.canGo = true;
+        }
+      }
+
+      // when the game is determined to be over changes all of the squares on the board to blank squares and allows a new game to start
+      $scope.restartGame = function() {
+        for (var i = 0; i < $scope.arrayOfDivIDs.length; i++) {
+          document.getElementById($scope.arrayOfDivIDs[i]).style.backgroundImage = "";
+        }
+        $scope.toggleNewGameDiv();
+      }
+
+      // the http service loads information from a json file which determines the appearance of the game board
+      $http.get("boardInformation.json")
+        .then(function(response) {
+          $scope.divInfo = response.data.information;
+        });
+    });sderdf
+  </script>
+</body>
+
+</html>

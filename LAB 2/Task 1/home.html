@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" content="184610063786-sfu3shikh73535os31c19jit50aaljq0.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular-sanitize.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+
+<body ng-app="heads" ng-controller="newshead">
+<div style="margin:20px">
+    <h1><strong>World News!</strong></h1>
+</div>
+
+<!-- Adding Navigation Bar -->
+<nav class="navbar navbar-inverse " >
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <!-- To make tabs toggleable, added the data-toggle attribute -->
+            <li class="active"><a href="home.html" >Home</a></li>
+            <li><a href="home.html" >World</a></li>
+            <li><a href="home.html" >Politics</a></li>
+            <li><a href="home.html" >Business</a></li>
+            <li><a href="home.html" >Science</a></li>
+            <li><a href="home.html " >Sports</a></li>
+            <li><a href="login.html" >SignIn</a></li>
+        </ul>
+
+    <div class="nav navbar-nav navbar-right" >
+        <input type='text' ng-model='search' placeholder="Topic" style="margin:10px; background-color:#f2f2f2; " />
+        <input type='text' ng-model='source' placeholder="Source" style="margin:10px; background-color:#f2f2f2; " />
+        <button id="btn" ng-click="getNews()" > Search </button>
+    </div>
+    </div>
+</nav>
+
+<!--search results div-->
+<div ng-show="currentnews.length > 0" style="margin: 35px";>
+
+        <div ng-repeat="y in    currentnews">
+            <h2>{{y.title}}</h2>
+            <a href="{{y.url}}" target="_blank">  <img height="300px" width="400px" ng-src="{{y.urlToImage}}"/></a>
+            <h6>{{y.publishedAt}}</h6>
+            <h4> {{y.description}}</h4>
+
+        </div>
+</div>
+
+<!-- headlines div-->
+    <div ng-show="headnews.length > 0" id="divMainNews">
+        <div ng-repeat="x in headnews">
+            <div class="image">
+                <h2>{{x.title}}</h2>
+                <a href="{{x.url}}" target="_blank" >  <img height="300px"width="400px" ng-src="{{x.urlToImage}}"/></a>
+                <h6>{{x.publishedAt}}</h6>
+                <h4> {{x.description}}</h4>
+
+            </div>
+            </div>
+
+    </div>
+</div>
+
+</body>
+</html>
