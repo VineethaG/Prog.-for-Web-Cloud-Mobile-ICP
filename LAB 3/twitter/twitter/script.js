@@ -9,6 +9,6 @@ R({ url: url,
     }
 }, function(err, resp, body) {
     console.log(body); //the bearer token...
-    resp.send(body);
+
 });
 

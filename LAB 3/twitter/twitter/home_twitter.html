@@ -28,14 +28,14 @@
 
         <div class="nav navbar-nav navbar-right" >
             <input type='text' ng-model='search' placeholder="Enter Name" style="margin:10px; background-color:#f2f2f2; " />
-            <button id="btn" ng-click="getNews()" > Search </button>
+            <button id="btn" ng-click="getFriends()" > Search </button>
         </div>
     </div>
 </nav>
 
 <!--search results div-->
 <div ng-show="search" style="margin: 35px";>
-    <div ng-repeat="y in fL">
+    <div ng-repeat="y in friendsList">
         <h1>{{y.name}}</h1>
     </div>
 

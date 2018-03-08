@@ -3,7 +3,7 @@ var app = angular.module('friends', [])
         $scope.getFriends = function () {
             var x = $scope.search;
             var friendsList = [];
-            var url = 'https://api.twitter.com/1/friends/ids.json?cursor=-1&screen_name='+x;
+            var url = 'https://api.twitter.com/1/friends/list.json?cursor=-1&screen_name='+x;
             console.log(url);
             $http.get(url,{
                     headers: {
