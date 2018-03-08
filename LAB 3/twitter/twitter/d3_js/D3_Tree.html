@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" content="184610063786-sfu3shikh73535os31c19jit50aaljq0.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular-sanitize.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<meta charset="utf-8">
+<style type="text/css">
+
+    .node {
+        cursor: pointer;
+    }
+
+    .overlay{
+        background-color:#EEE;
+    }
+
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+
+    .node text {
+        font-size:10px;
+        font-family:sans-serif;
+    }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 1.5px;
+    }
+
+    .templink {
+        fill: none;
+        stroke: red;
+        stroke-width: 3px;
+    }
+
+    .ghostCircle.show{
+        display:block;
+    }
+
+    .ghostCircle, .activeDrag .ghostCircle{
+        display: none;
+    }
+
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="dndTree.js"></script>
+</head>
+<body>
+<div style="margin:20px">
+    <h1><strong>Friends List</strong></h1>
+</div>
+
+<!-- Adding Navigation Bar -->
+<nav class="navbar navbar-inverse " >
+    <div class="container-fluid">
+        <div class="nav navbar-nav navbar-right" >
+            <form  >
+                <input type='text' name="search" ng-model='search' placeholder="Enter Name" style="margin:10px; background-color:#f2f2f2; " />
+            </form>
+
+        </div>
+    </div>
+</nav>
+
+<div id="tree-container"></div>
+</div>
+</div>
+</body>
+</html>

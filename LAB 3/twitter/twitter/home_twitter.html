@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" content="184610063786-sfu3shikh73535os31c19jit50aaljq0.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular-sanitize.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="twitter_script.js"></script>
+</head>
+
+
+<body ng-app="friends" ng-controller="listCtrl">
+<div style="margin:20px">
+    <h1><strong>Twitter Friends</strong></h1>
+</div>
+
+<!-- Adding Navigation Bar -->
+<nav class="navbar navbar-inverse " >
+    <div class="container-fluid">
+
+
+        <div class="nav navbar-nav navbar-right" >
+            <input type='text' ng-model='search' placeholder="Enter Name" style="margin:10px; background-color:#f2f2f2; " />
+            <button id="btn" ng-click="getNews()" > Search </button>
+        </div>
+    </div>
+</nav>
+
+<!--search results div-->
+<div ng-show="search" style="margin: 35px";>
+    <div ng-repeat="y in fL">
+        <h1>{{y.name}}</h1>
+    </div>
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>
