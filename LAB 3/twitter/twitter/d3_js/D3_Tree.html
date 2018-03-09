@@ -1,83 +1,135 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HomePage</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-signin-client_id" content="184610063786-sfu3shikh73535os31c19jit50aaljq0.apps.googleusercontent.com">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular-sanitize.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>friend List D3.js</title>
+    <script>
+        function myFunction() {
+            location.reload();
+        }
+    </script>
+    <style>
 
-<meta charset="utf-8">
-<style type="text/css">
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 3px;
+        }
 
-    .node {
-        cursor: pointer;
-    }
+        .node text { font: 12px sans-serif; }
 
-    .overlay{
-        background-color:#EEE;
-    }
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2px;
+        }
+    </style>
 
-    .node circle {
-        fill: #fff;
-        stroke: steelblue;
-        stroke-width: 1.5px;
-    }
-
-    .node text {
-        font-size:10px;
-        font-family:sans-serif;
-    }
-
-    .link {
-        fill: none;
-        stroke: #ccc;
-        stroke-width: 1.5px;
-    }
-
-    .templink {
-        fill: none;
-        stroke: red;
-        stroke-width: 3px;
-    }
-
-    .ghostCircle.show{
-        display:block;
-    }
-
-    .ghostCircle, .activeDrag .ghostCircle{
-        display: none;
-    }
-
-</style>
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="dndTree.js"></script>
 </head>
+
 <body>
 <div style="margin:20px">
-    <h1><strong>Friends List</strong></h1>
+    <h1><strong>Twitter Friends</strong></h1>
 </div>
 
 <!-- Adding Navigation Bar -->
 <nav class="navbar navbar-inverse " >
     <div class="container-fluid">
-        <div class="nav navbar-nav navbar-right" >
-            <form  >
-                <input type='text' name="search" ng-model='search' placeholder="Enter Name" style="margin:10px; background-color:#f2f2f2; " />
-            </form>
-
-        </div>
+        <form action="http://localhost:8080/user" target="_blank" id="form" method="post" >
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" name="s_name" id="firstname" placeholder="Name">
+                <button onclick="myFunction()">Enter</button>
+            </div>
+        </form>
     </div>
 </nav>
+</div>
 
-<div id="tree-container"></div>
-</div>
-</div>
+<!-- load the d3.js library -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+
+<script>
+
+    // ************** Generate the tree diagram	 *****************
+    var margin = {top: 20, right: 120, bottom: 20, left: 120},
+        width = 960 - margin.right - margin.left,
+        height = 500 - margin.top - margin.bottom;
+
+    var i = 0;
+
+    var tree = d3.layout.tree()
+        .size([height, width]);
+
+    var diagonal = d3.svg.diagonal()
+        .projection(function(d) { return [d.y, d.x]; });
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.right + margin.left)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // load the external data
+    d3.json("DynTreeData.json", function(error, treeData) {
+        root = treeData[0];
+        update(root);
+    });
+
+    function update(source) {
+
+        // Compute the new tree layout.
+        var nodes = tree.nodes(root),
+            links = tree.links(nodes);
+
+        // Normalize for fixed-depth.
+        nodes.forEach(function(d) { d.y = d.depth * 180; });
+
+        // Declare the nodes…
+        var node = svg.selectAll("g.node")
+            .data(nodes, function(d) { return d.name || (d.name = ++i); });
+
+        // Enter the nodes.
+        var nodeEnter = node.enter().append("g")
+            .attr("class", function(d) {
+                if (d.parent == "null"){
+                return "node parent"
+            }else
+                return "node child"})
+            .attr("transform", function(d) {
+                return "translate(" + d.y + "," + d.x + ")"; });
+
+        nodeEnter.append("circle")
+            .attr("r", 10)
+            .style("fill", "#fff");
+
+        nodeEnter.append("text")
+            .attr("x", function(d) {
+                return 13 })
+            .attr("dy", ".35em")
+            .attr("text-anchor", function(d) {
+                return d.parent || d._children ? "start" : "end"; })
+            .text(function(d) { return d.name;
+            })
+            // .text(function(d) { return d.screen_name;
+            // })
+            .style("fill-opacity", 1);
+
+        // Declare the links…
+        var link = svg.selectAll("path.link")
+            .data(links, function(d) { return d.target.id; });
+
+        // Enter the links.
+        link.enter().insert("path", "g")
+            .attr("class", "link")
+            .attr("d", diagonal);
+
+    }
+
+</script>
 </body>
 </html>

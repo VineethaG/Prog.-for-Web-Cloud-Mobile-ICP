@@ -1,0 +1,496 @@
+[
+  {
+    "next_cursor": 0,
+    "next_cursor_str": "0",
+    "previous_cursor": 0,
+    "previous_cursor_str": "0",
+    "children": [
+      {
+        "id": 22289137,
+        "id_str": "22289137",
+        "name": "Football Scores",
+        "screen_name": "twitscores",
+        "location": "All around the world",
+        "description": "Football (Soccer) results for the main football leagues, cups and international competitions",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 2317,
+        "friends_count": 39,
+        "listed_count": 83,
+        "created_at": "Sat Feb 28 19:55:05 +0000 2009",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 85787,
+        "lang": "en",
+        "status": {
+          "created_at": "Tue Jan 14 19:00:04 +0000 2014",
+          "id": 423167651276685300,
+          "id_str": "423167651276685313",
+          "text": "Kick Off: Cobresal 0 - 0 Univ. de Chile",
+          "truncated": false,
+          "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+          },
+          "source": "<a href=\"http://www.futeboladas.com\" rel=\"nofollow\">Twitscores updater</a>",
+          "in_reply_to_status_id": null,
+          "in_reply_to_status_id_str": null,
+          "in_reply_to_user_id": null,
+          "in_reply_to_user_id_str": null,
+          "in_reply_to_screen_name": null,
+          "geo": null,
+          "coordinates": null,
+          "place": null,
+          "contributors": null,
+          "is_quote_status": false,
+          "retweet_count": 4,
+          "favorite_count": 2,
+          "favorited": false,
+          "retweeted": false,
+          "lang": "es"
+        },
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/84735063/bola_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/84735063/bola_normal.png",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "muting": null,
+        "blocking": null,
+        "blocked_by": null,
+        "translator_type": "none"
+      },
+      {
+        "id": 25268540,
+        "id_str": "25268540",
+        "name": "Eurosport UK",
+        "screen_name": "Eurosport_UK",
+        "location": "Share Our Passion",
+        "description": "Eurosport Player https://t.co/73oiWep8f5; Mobile https://t.co/3EwP888QeB;   Facebook https://t.co/ROD7s7Xuvh; Instagram https://t.co/pw6p70nJBI; Snapchat",
+        "url": "http://t.co/Zq6CLJ3J3n",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/Zq6CLJ3J3n",
+                "expanded_url": "http://eurosport.co.uk",
+                "display_url": "eurosport.co.uk",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": [
+              {
+                "url": "https://t.co/73oiWep8f5",
+                "expanded_url": "http://eurosportplayer.co.uk",
+                "display_url": "eurosportplayer.co.uk",
+                "indices": [
+                  17,
+                  40
+                ]
+              },
+              {
+                "url": "https://t.co/3EwP888QeB",
+                "expanded_url": "http://bit.ly/EurosportApps",
+                "display_url": "bit.ly/EurosportApps",
+                "indices": [
+                  49,
+                  72
+                ]
+              },
+              {
+                "url": "https://t.co/ROD7s7Xuvh",
+                "expanded_url": "http://fb.me/Eurosport",
+                "display_url": "fb.me/Eurosport",
+                "indices": [
+                  85,
+                  108
+                ]
+              },
+              {
+                "url": "https://t.co/pw6p70nJBI",
+                "expanded_url": "http://bit.ly/ES-Insta",
+                "display_url": "bit.ly/ES-Insta",
+                "indices": [
+                  120,
+                  143
+                ]
+              }
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 151313,
+        "friends_count": 442,
+        "listed_count": 2149,
+        "created_at": "Thu Mar 19 10:47:34 +0000 2009",
+        "favourites_count": 595,
+        "utc_offset": 0,
+        "time_zone": "London",
+        "geo_enabled": true,
+        "verified": true,
+        "statuses_count": 116422,
+        "lang": "en",
+        "status": {
+          "created_at": "Thu Mar 08 22:25:18 +0000 2018",
+          "id": 971874528967188500,
+          "id_str": "971874528967188485",
+          "text": "RT @Eurosport_UK: Arsenal fans laud Ozil as German reaches impressive milestone in Milan win 💯\n\nhttps://t.co/yXZkelOK7p https://t.co/OWNUXo…",
+          "truncated": false,
+          "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+              {
+                "screen_name": "Eurosport_UK",
+                "name": "Eurosport UK",
+                "id": 25268540,
+                "id_str": "25268540",
+                "indices": [
+                  3,
+                  16
+                ]
+              }
+            ],
+            "urls": [
+              {
+                "url": "https://t.co/yXZkelOK7p",
+                "expanded_url": "http://bit.ly/2DaWCtT",
+                "display_url": "bit.ly/2DaWCtT",
+                "indices": [
+                  96,
+                  119
+                ]
+              }
+            ]
+          },
+          "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
+          "in_reply_to_status_id": null,
+          "in_reply_to_status_id_str": null,
+          "in_reply_to_user_id": null,
+          "in_reply_to_user_id_str": null,
+          "in_reply_to_screen_name": null,
+          "geo": null,
+          "coordinates": null,
+          "place": null,
+          "contributors": null,
+          "retweeted_status": {
+            "created_at": "Thu Mar 08 20:56:47 +0000 2018",
+            "id": 971852250749513700,
+            "id_str": "971852250749513729",
+            "text": "Arsenal fans laud Ozil as German reaches impressive milestone in Milan win 💯\n\nhttps://t.co/yXZkelOK7p https://t.co/OWNUXoa10W",
+            "truncated": false,
+            "entities": {
+              "hashtags": [],
+              "symbols": [],
+              "user_mentions": [],
+              "urls": [
+                {
+                  "url": "https://t.co/yXZkelOK7p",
+                  "expanded_url": "http://bit.ly/2DaWCtT",
+                  "display_url": "bit.ly/2DaWCtT",
+                  "indices": [
+                    78,
+                    101
+                  ]
+                }
+              ],
+              "media": [
+                {
+                  "id": 971852156881068000,
+                  "id_str": "971852156881068033",
+                  "indices": [
+                    102,
+                    125
+                  ],
+                  "media_url": "http://pbs.twimg.com/tweet_video_thumb/DXy2YzkX4AEiW4g.jpg",
+                  "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/DXy2YzkX4AEiW4g.jpg",
+                  "url": "https://t.co/OWNUXoa10W",
+                  "display_url": "pic.twitter.com/OWNUXoa10W",
+                  "expanded_url": "https://twitter.com/Eurosport_UK/status/971852250749513729/photo/1",
+                  "type": "photo",
+                  "sizes": {
+                    "thumb": {
+                      "w": 150,
+                      "h": 150,
+                      "resize": "crop"
+                    },
+                    "small": {
+                      "w": 400,
+                      "h": 336,
+                      "resize": "fit"
+                    },
+                    "large": {
+                      "w": 400,
+                      "h": 336,
+                      "resize": "fit"
+                    },
+                    "medium": {
+                      "w": 400,
+                      "h": 336,
+                      "resize": "fit"
+                    }
+                  }
+                }
+              ]
+            },
+            "extended_entities": {
+              "media": [
+                {
+                  "id": 971852156881068000,
+                  "id_str": "971852156881068033",
+                  "indices": [
+                    102,
+                    125
+                  ],
+                  "media_url": "http://pbs.twimg.com/tweet_video_thumb/DXy2YzkX4AEiW4g.jpg",
+                  "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/DXy2YzkX4AEiW4g.jpg",
+                  "url": "https://t.co/OWNUXoa10W",
+                  "display_url": "pic.twitter.com/OWNUXoa10W",
+                  "expanded_url": "https://twitter.com/Eurosport_UK/status/971852250749513729/photo/1",
+                  "type": "animated_gif",
+                  "sizes": {
+                    "thumb": {
+                      "w": 150,
+                      "h": 150,
+                      "resize": "crop"
+                    },
+                    "small": {
+                      "w": 400,
+                      "h": 336,
+                      "resize": "fit"
+                    },
+                    "large": {
+                      "w": 400,
+                      "h": 336,
+                      "resize": "fit"
+                    },
+                    "medium": {
+                      "w": 400,
+                      "h": 336,
+                      "resize": "fit"
+                    }
+                  },
+                  "video_info": {
+                    "aspect_ratio": [
+                      25,
+                      21
+                    ],
+                    "variants": [
+                      {
+                        "bitrate": 0,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/tweet_video/DXy2YzkX4AEiW4g.mp4"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 6,
+            "favorite_count": 7,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+          },
+          "is_quote_status": false,
+          "retweet_count": 6,
+          "favorite_count": 0,
+          "favorited": false,
+          "retweeted": false,
+          "possibly_sensitive": false,
+          "lang": "en"
+        },
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "ABB8C2",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/257985363/Fond_Twitter.jpg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/257985363/Fond_Twitter.jpg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/819956584365309952/sty8FD3e_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/819956584365309952/sty8FD3e_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/25268540/1519735243",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "E0E5E9",
+        "profile_text_color": "414141",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "muting": null,
+        "blocking": null,
+        "blocked_by": null,
+        "translator_type": "none"
+      },
+      {
+        "id": 774096,
+        "id_str": "774096",
+        "name": "Luria Petrucci",
+        "screen_name": "LuriaPetrucci",
+        "location": "Portland, OR",
+        "description": "Grow Your Business with Professional LIVE Streams! | LIVE Tuesday - Thursday 10 AM Pacific https://t.co/VaNwDqmVZ7",
+        "url": "https://t.co/52rZJPOOil",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/52rZJPOOil",
+                "expanded_url": "http://LiveStreamingPros.com",
+                "display_url": "LiveStreamingPros.com",
+                "indices": [
+                  0,
+                  23
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": [
+              {
+                "url": "https://t.co/VaNwDqmVZ7",
+                "expanded_url": "http://LiveStreamingPros.Live",
+                "display_url": "LiveStreamingPros.Live",
+                "indices": [
+                  91,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 214970,
+        "friends_count": 1128,
+        "listed_count": 9543,
+        "created_at": "Thu Feb 15 17:24:00 +0000 2007",
+        "favourites_count": 1161,
+        "utc_offset": -21600,
+        "time_zone": "Central Time (US & Canada)",
+        "geo_enabled": true,
+        "verified": true,
+        "statuses_count": 22513,
+        "lang": "en",
+        "status": {
+          "created_at": "Thu Mar 08 01:47:45 +0000 2018",
+          "id": 971563088662048800,
+          "id_str": "971563088662048768",
+          "text": "@GoldDalek @ImpartialGeek I don't know what red is but I'll take the bacon!!",
+          "truncated": false,
+          "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+              {
+                "screen_name": "GoldDalek",
+                "name": "me",
+                "id": 43065935,
+                "id_str": "43065935",
+                "indices": [
+                  0,
+                  10
+                ]
+              },
+              {
+                "screen_name": "ImpartialGeek",
+                "name": "David Foster",
+                "id": 121868306,
+                "id_str": "121868306",
+                "indices": [
+                  11,
+                  25
+                ]
+              }
+            ],
+            "urls": []
+          },
+          "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+          "in_reply_to_status_id": 971425640154058800,
+          "in_reply_to_status_id_str": "971425640154058752",
+          "in_reply_to_user_id": 43065935,
+          "in_reply_to_user_id_str": "43065935",
+          "in_reply_to_screen_name": "GoldDalek",
+          "geo": null,
+          "coordinates": null,
+          "place": null,
+          "contributors": null,
+          "is_quote_status": false,
+          "retweet_count": 0,
+          "favorite_count": 0,
+          "favorited": false,
+          "retweeted": false,
+          "lang": "en"
+        },
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "1E72BD",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/116623209/twitter-background_Cali.jpg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/116623209/twitter-background_Cali.jpg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/831333593934729216/-Nc0DJon_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/831333593934729216/-Nc0DJon_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/774096/1503424174",
+        "profile_link_color": "1E72BD",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "636363",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "muting": null,
+        "blocking": null,
+        "blocked_by": null,
+        "translator_type": "none"
+      }
+    ]
+  }
+]
