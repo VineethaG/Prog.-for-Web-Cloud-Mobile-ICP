@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Order Summary");
         emailIntent.putExtra(Intent.EXTRA_TEXT, orderSummaryMessage);
         startActivity(Intent.createChooser(emailIntent, ""));
-
     }
     private String boolToString(boolean bool){
         return bool?(getString(R.string.yes)):(getString(R.string.no));
