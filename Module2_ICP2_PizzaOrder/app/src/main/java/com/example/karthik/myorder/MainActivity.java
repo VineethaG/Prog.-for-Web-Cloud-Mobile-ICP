@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) !=null){
             startActivity(intent);
         }*/
-
 //        get user input
         EditText userInputNameView = (EditText) findViewById(R.id.user_input);
         String userInputName = userInputNameView.getText().toString();
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         float totalPrice = calculatePrice(hasExtraCheese, hasChicken);
 //        create and store the order summary
         String orderSummaryMessage = createOrderSummary(userInputName, hasExtraCheese, hasChicken, totalPrice);
-
 // Write the relevant code for making the buttons work(i.e impelement the implicit and explicit intents
         Intent intent = new Intent(this, summary.class);
         intent.putExtra(EXTRA_MESSAGE, orderSummaryMessage);
@@ -115,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return quantity * basePrice;
-
     }
 
     /**
