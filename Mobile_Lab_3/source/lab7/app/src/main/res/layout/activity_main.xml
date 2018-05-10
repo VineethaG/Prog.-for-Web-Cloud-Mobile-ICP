@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="@string/welcome_to_login_screen"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/welcomeMessage"
+        android:layout_marginTop="80dp"
+        android:text="@string/invalid_credentials"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/loginusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="118dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="@string/email_address"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/loginpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="152dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/welcomeMessage"
+        android:layout_marginTop="198dp"
+        android:background="@color/colorPrimary"
+        android:onClick="checkCredentials"
+        android:text="@string/login"
+        android:textColor="@color/com_facebook_button_login_silver_background_color" />
+
+
+    <TextView
+        android:id="@+id/LoginMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        android:layout_below="@+id/login" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/login"
+        android:layout_marginEnd="109dp"
+        android:background="@color/colorPrimary"
+        android:onClick="Register"
+        android:text="@string/register"
+        android:textColor="@color/com_facebook_button_login_silver_background_color" />
+
+</RelativeLayout>
+

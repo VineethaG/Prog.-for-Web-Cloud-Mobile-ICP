@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_text_to_speech"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TexttoSpeech">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="189dp"
+        android:layout_height="94dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp"
+        android:hint="@string/tell_about_yourself"
+        android:inputType="text|textMultiLine" />
+
+    <Button
+        android:id="@+id/saveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="203dp"
+        android:onClick="saveText"
+        android:text="@string/save" />
+    <ImageButton
+        android:id="@+id/btnSpeak"
+        android:layout_width="147dp"
+        android:layout_height="122dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="128dp"
+        android:background="#f5f5f5"
+        android:contentDescription="@string/mic"
+        android:onClick="listen"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mic"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="98dp"
+        android:text="@string/listen"
+        android:visibility="invisible" />
+
+</RelativeLayout>
+
